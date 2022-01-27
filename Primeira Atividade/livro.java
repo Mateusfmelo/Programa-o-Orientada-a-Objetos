@@ -2,12 +2,12 @@ import java.util.Date;
 
 public class Livro {
     //Atributos
-    private String titulo, autor, editora, ISBN;
+    private String titulo, autor, ISBN, editora;
     private Date ano;
     private int edicao;
 
     //Construtores
-    public Livro(String titulo, String autor, String editora, String ISBN, Date ano, int edicao ){
+    public Livro(String titulo, String autor, String ISBN, String editora, Date ano, int edicao ){
         this.titulo = titulo;
         this.autor = autor;
         this.editora = editora;
@@ -34,21 +34,20 @@ public class Livro {
         this.autor = autor;
     }
 
+        public String getISBN(){
+        return ISBN;
+    }
+
+    public void setISBN(String ISBN){
+        this.ISBN = ISBN;
+    }
+
     public String getEditora(){
         return editora;
     }
 
     public void setEditora(String editora){
         this.editora = editora;
-
-    }
-
-    public String getISBN(){
-        return ISBN;
-    }
-
-    public void setISBN(String ISBN){
-        this.ISBN = ISBN;
 
     }
 

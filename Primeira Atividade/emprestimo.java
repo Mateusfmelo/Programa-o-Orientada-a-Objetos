@@ -4,13 +4,17 @@ public class Emprestimo {
     //Atributos
     private Date dataEmprestimo, dataPrevistaDeDevolucao, dataDeEntregaReal;
     private int situacao;
+    private Usuario usuario;
+    private Exemplar exemplar;
 
     //Construtores
-    public Emprestimo(Date dataEmprestimo, Date dataPrevistaDeDevolucao, Date dataDeEntregaReal, int situacao){
+    public Emprestimo(Date dataEmprestimo, Date dataPrevistaDeDevolucao, Date dataDeEntregaReal, int situacao, Usuario usuario, Exemplar exemplar){
         this.dataEmprestimo = dataEmprestimo;
         this.situacao = situacao;
         this.dataPrevistaDeDevolucao = dataPrevistaDeDevolucao;
         this.dataDeEntregaReal = dataDeEntregaReal;
+        this.usuario = usuario;
+        this.exemplar = exemplar;
     }
     
     //Métodos
@@ -44,6 +48,22 @@ public class Emprestimo {
 
     public void setSituacao(int situacao){
         this.situacao = situacao;
+    }
+
+    public Usuario getUsuario(){
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+    
+    public Exemplar getExemplar(){
+        return exemplar;
+    }
+
+    public void setExemplar(Exemplar exemplar) {
+        this.exemplar = exemplar;
     }
 
 }
