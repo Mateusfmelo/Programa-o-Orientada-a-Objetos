@@ -1,42 +1,40 @@
-public class exemplar {
+public class Exemplar {
     //Atributos
-    private boolean cativa;
-    private boolean emprestada;
+    private boolean cativa, emprestada;
     private int codigo;
     
 
     //Construtores
-    public exemplar(int codigo, boolean cativa, boolean emprestada){
+    public Exemplar(boolean cativa, boolean emprestada, int codigo){
         this.cativa = cativa;
-        this.codigo = codigo;
         this.emprestada = emprestada;
+        this.codigo = codigo;
     }
     
     //Métodos
-    public boolean getcativa(){
+    public boolean getCativa(){
         return cativa;
     }
 
-    public void setcativa(boolean cativa){
+    public void setCativa(boolean cativa){
         this.cativa = cativa;
 
     }
 
-    public boolean getemprestada(){
+    public boolean getEmprestada(){
         return emprestada;
     }
 
-    public void setemprestada(boolean emprestada){
+    public void setEmprestada(boolean emprestada){
         this.emprestada = emprestada;
     }
 
-    public int getcodigo(){
+    public int getCodigo(){
         return codigo;
     }
 
-    public void setcodigo(int codigo){
+    public void setCodigo(int codigo){
         this.codigo = codigo;
-
     }
 
 }

@@ -1,12 +1,10 @@
-public class usuario {
+public class Usuario {
     //Atributos
-    private String nome;
+    private String nome, telefone, matricula;
     private int CPF;
-    private String telefone;
-    private String matricula;
 
     //Construtores
-    public usuario(String nome, int CPF, String telefone, String matricula){
+    public Usuario(String nome, String telefone, String matricula, int CPF){
         this.nome = nome;
         this.CPF = CPF;
         this.telefone = telefone;
@@ -18,33 +16,33 @@ public class usuario {
         return nome;
     }
 
-    public void setnome(String nome){
+    public void setNome(String nome){
         this.nome = nome;
 
     }
 
+    public String getTelefone(){
+        return telefone;
+    }
+
+    public void setTelefone(String telefone){
+        this.telefone = telefone;
+
+    }
+
+    public String getMatricula(){
+        return matricula;
+    }
+
+    public void setMatricula(String matricula){
+        this.matricula = matricula;
+    }   
+    
     public int getCPF(){
         return CPF;
     }
 
     public void setCPF(int CPF){
         this.CPF = CPF;
-    }
-
-    public String gettelefone(){
-        return telefone;
-    }
-
-    public void settelefone(String telefone){
-        this.telefone = telefone;
-
-    }
-
-    public String getmatricula(){
-        return matricula;
-    }
-
-    public void setmatricula(String matricula){
-        this.matricula = matricula;
     }
 }

@@ -1,16 +1,13 @@
 import java.util.Date;
 
-public class livro {
+public class Livro {
     //Atributos
-    private String titulo;
-    private String autor;
-    private String editora;
-    private String ISBN;
+    private String titulo, autor, editora, ISBN;
     private Date ano;
     private int edicao;
 
     //Construtores
-    public livro(String titulo, String autor, String editora, String ISBN, Date ano, int edicao ){
+    public Livro(String titulo, String autor, String editora, String ISBN, Date ano, int edicao ){
         this.titulo = titulo;
         this.autor = autor;
         this.editora = editora;
@@ -20,33 +17,33 @@ public class livro {
     }
     
     //Métodos
-    public String gettitulo(){
+    public String getTitulo(){
         return titulo;
     }
 
-    public void setcativa(String titulo){
+    public void setTitulo(String titulo){
         this.titulo = titulo;
 
     }
 
-    public String getautor(){
+    public String getAutor(){
         return autor;
     }
 
-    public void setautor(String autor){
+    public void setAutor(String autor){
         this.autor = autor;
     }
 
-    public String geteditora(){
+    public String getEditora(){
         return editora;
     }
 
-    public void seteditora(String editora){
+    public void setEditora(String editora){
         this.editora = editora;
 
     }
 
-    public String getISBNa(){
+    public String getISBN(){
         return ISBN;
     }
 
@@ -55,20 +52,20 @@ public class livro {
 
     }
 
-    public Date getano(){
+    public Date getAno(){
         return ano;
     }
 
-    public void setano(Date ano){
+    public void setAno(Date ano){
         this.ano = ano;
 
     }
 
-    public int getedicao(){
+    public int getEdicao(){
         return edicao;
     }
 
-    public void setedicao(int edicao){
+    public void setEdicao(int edicao){
         this.edicao = edicao;
 
     }

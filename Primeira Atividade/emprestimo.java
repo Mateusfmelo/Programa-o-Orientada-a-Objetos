@@ -1,53 +1,51 @@
 import java.util.Date;
 
-public class emprestimo {
+public class Emprestimo {
     //Atributos
-    private Date dataDeEmprestimo;
-    private Date dataPrevistaDeDevolucao;
-    private Date dataDeEntregaReal;
+    private Date dataEmprestimo, dataPrevistaDeDevolucao, dataDeEntregaReal;
     private int situacao;
 
     //Construtores
-    public emprestimo(Date dataDeEmprestimo, int situacao, Date dataPrevistaDeDevolucao, Date dataDeEntregaReal){
-        this.dataDeEmprestimo = dataDeEmprestimo;
+    public Emprestimo(Date dataEmprestimo, Date dataPrevistaDeDevolucao, Date dataDeEntregaReal, int situacao){
+        this.dataEmprestimo = dataEmprestimo;
         this.situacao = situacao;
         this.dataPrevistaDeDevolucao = dataPrevistaDeDevolucao;
         this.dataDeEntregaReal = dataDeEntregaReal;
     }
     
     //Métodos
-    public Date getdataDeEmprestimo(){
-        return dataDeEmprestimo;
+    public Date getDataEmprestimo(){
+        return dataEmprestimo;
     }
 
-    public void setdataDeEmprestimo(Date dataDeEmprestimo){
-        this.dataDeEmprestimo = dataDeEmprestimo;
+    public void setDataEmprestimo(Date dataEmprestimo){
+        this.dataEmprestimo = dataEmprestimo;
 
     }
 
-    public int getsituacao(){
-        return situacao;
-    }
-
-    public void setsituacao(int situacao){
-        this.situacao = situacao;
-    }
-
-    public Date getdataPrevistaDeDevolucao(){
+    public Date getDataPrevistaDeDevolucao(){
         return dataPrevistaDeDevolucao;
     }
 
-    public void setdataPrevistaDeDevolucao(Date dataPrevistaDeDevolucao){
+    public void setDataPrevistaDeDevolucao(Date dataPrevistaDeDevolucao){
         this.dataPrevistaDeDevolucao = dataPrevistaDeDevolucao;
 
     }
 
-    public Date getdataDeEntregaReal(){
+    public Date getDataDeEntregaReal(){
         return dataDeEntregaReal;
     }
 
-    public void setdataDeEntregaReal(Date dataDeEntregaReal){
+    public void setDataDeEntregaReal(Date dataDeEntregaReal){
         this.dataDeEntregaReal = dataDeEntregaReal;
     }
-    
+
+    public int getSituacao(){
+        return situacao;
+    }
+
+    public void setSituacao(int situacao){
+        this.situacao = situacao;
+    }
+
 }
