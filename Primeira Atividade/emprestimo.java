@@ -20,7 +20,6 @@ public class Emprestimo {
 
     public void setDataEmprestimo(Date dataEmprestimo){
         this.dataEmprestimo = dataEmprestimo;
-
     }
 
     public Date getDataPrevistaDeDevolucao(){
@@ -29,7 +28,6 @@ public class Emprestimo {
 
     public void setDataPrevistaDeDevolucao(Date dataPrevistaDeDevolucao){
         this.dataPrevistaDeDevolucao = dataPrevistaDeDevolucao;
-
     }
 
     public Date getDataDeEntregaReal(){

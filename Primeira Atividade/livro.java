@@ -67,7 +67,6 @@ public class Livro {
 
     public void setEdicao(int edicao){
         this.edicao = edicao;
-
     }
 
 }
