@@ -1,9 +1,8 @@
 import java.util.Scanner;
-
-public class vetor4 {
+public class Vetor4 {
 
     public static void main(String[] args) {
-        Scanner ler = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
 
         int n = 15;
         int a[] = new int[n];
@@ -11,21 +10,16 @@ public class vetor4 {
         int i;
 
         for (i = 0; i < n; i++) {
-            System.out.printf("Informe o %2do. elemento de %d: ", (i + 1), n);
-            a[i] = ler.nextInt();
+            System.out.printf("Escreva o %2do. elemento de %d: ", (i + 1), n);
+            a[i] = teclado.nextInt();
         }
 
         for (i = 0; i < n; i++) {
             b[i] = Math.sqrt(a[i]);
         }
 
-        System.out.printf("\n\n i- a[i]   b[i] = sqrt(a[i])\n");
-
-        System.out.printf("============================\n");
         for (i = 0; i < n; i++) {
-            System.out.printf("%2d- %4d   %10.5f\n", i, a[i], b[i]);
+            System.out.printf("%2d %4d   %10.5f\n", i, a[i], b[i]);
         }
-        System.out.printf("============================\n");
     }
-
 }

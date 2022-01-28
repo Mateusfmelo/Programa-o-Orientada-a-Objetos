@@ -1,9 +1,8 @@
 import java.util.Scanner;
-
-public class vetor1 {
+public class Vetor1 {
 
   public static void main(String[] args) {
-    Scanner ler = new Scanner(System.in);
+    Scanner teclado = new Scanner(System.in);
 
     int n = 5;
     int a[] = new int[n];
@@ -11,8 +10,8 @@ public class vetor1 {
     int i;
 
     for (i = 0; i < n; i++) {
-      System.out.printf("Informe %do. elemento de %d: ", (i + 1), n);
-      a[i] = ler.nextInt();
+      System.out.printf("Escreva o %do. elemento de %d: ", (i + 1), n);
+      a[i] = teclado.nextInt();
     }
 
     for (i = 0; i < n; i++) {
