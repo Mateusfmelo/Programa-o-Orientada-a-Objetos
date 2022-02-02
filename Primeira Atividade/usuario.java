@@ -45,4 +45,8 @@ public class Usuario {
     public void setCPF(int CPF){
         this.CPF = CPF;
     }
+
+    public String toString(){
+        return " Nome: " + nome + " telefone: " + telefone + " matricula: " + matricula + " CPF: " + CPF;
+    }
 }

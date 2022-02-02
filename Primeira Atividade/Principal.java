@@ -1,7 +1,7 @@
 import java.util.Date;
 import java.util.Scanner;
 
-class Main {
+class Principal {
     public static void main(String[] args) {
         //Leitura do teclado
         Scanner teclado = new Scanner(System.in);
@@ -16,11 +16,11 @@ class Main {
         System.out.println("Digite a matrícula: ");
         String matricula = teclado.nextLine();
 
-        System.out.println("Digite o CPF: :");
+        System.out.println("Digite o CPF: ");
         int CPF = teclado.nextInt();
 
         Usuario joao = new Usuario(nome, telefone, matricula, CPF);
-        System.out.println("Nome: " + joao.getNome());
+        System.out.println(joao);
         System.out.println("CPF: " + joao.getCPF());
         System.out.println("Matrícula: " + joao.getMatricula());
         System.out.println("Telefone: " + joao.getTelefone());
