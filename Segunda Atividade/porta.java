@@ -1,4 +1,4 @@
-public class porta {
+public class Porta {
     //Atributos
     private String cor;
     private int altura;
@@ -6,7 +6,7 @@ public class porta {
     private boolean estaAberta;
 
     //Construtores
-    public porta(String cor, int altura, int largura, boolean estaAberta){
+    public Porta(String cor, int altura, int largura, boolean estaAberta){
         this.cor = cor;
         this.altura = altura;
         this.largura = largura;

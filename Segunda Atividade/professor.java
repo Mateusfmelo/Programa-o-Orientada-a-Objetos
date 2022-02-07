@@ -1,4 +1,4 @@
-public class professor {
+public class Professor {
     //Atributos
     private int matricula;
     private String nome;
@@ -6,7 +6,7 @@ public class professor {
     
 
     //Construtores
-    public professor (int matricula, String nome, String departamento){
+    public Professor (int matricula, String nome, String departamento){
         this.matricula = matricula;
         this.departamento = departamento;
         this.nome = nome;

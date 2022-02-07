@@ -1,71 +1,45 @@
-public class televisor {
+public class Televisor {
     
-    private int canal ;
-    private int volume ;
-    private boolean ligar, desligar, aumentarVolume, diminuirVolume, trocarCanal ;
+    private int canal, volume;
+    private boolean ligado;
     
-    public televisor(int canal , int volume,boolean ligar,Boolean desligar,Boolean aumentarVolume,Boolean diminuirVolume,Boolean trocarCanal){
-        this.canal= canal;
-        this.volume= volume ;
-        this.ligar= ligar;
-        this.desligar= desligar ; 
-        this.aumentarVolume= aumentarVolume ;
-        this.diminuirVolume = diminuirVolume;
-        this.trocarCanal = trocarCanal;
-    }
-    
-    public int getCanal() {
-        return canal;
-    }
-    public boolean getTrocarCanal() {
-        return trocarCanal;
-    }
-    public void setTrocarCanal(boolean trocarCanal) {
-        this.trocarCanal = trocarCanal;
-    }
-    public boolean getDiminuirVolume() {
-        return diminuirVolume;
-    }
-
-    public boolean getAumentarVolume() {
-        return aumentarVolume;
-    }
-    public void setAumentarVolume(boolean aumentarVolume) {
-        this.aumentarVolume = aumentarVolume;
-    }
-    public boolean getDesligar() {
-        return desligar;
-    }
-    public void setDesligar(boolean desligar) {
-        this.desligar = desligar;
-    }
-    public boolean getLigar() {
-        return ligar;
-    }
-    public void setLigar(boolean ligar) {
-        this.ligar = ligar;
-    }
-    public int getVolume() {
-        return volume;
-    }
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
-    public void setCanal(int canal) {
+    public Televisor(int canal , int volume, boolean ligado){
         this.canal = canal;
+        this.volume = volume ;
+        this.ligado = ligado;
     }
 
-    @Override
-    public String toString(){
-        return
-                "numero:" + getCanal() +
-                    "\nsom:"+ getVolume()+
-                    "\nstatus:" + getLigar()+
-                    "\nstatus:"+ getDesligar()+
-                    "\naumentarsom:" + getAumentarVolume()+
-                    "\ndiminuirsom:"+ getDiminuirVolume()+
-                    "\nmudarcanal:" + getTrocarCanal();
-                    
+    public void ligar () {
+        if (!ligado) {
+            ligado = true;
+        }
     }
 
+    public void desligar () {
+        if (ligado) {
+            ligado = false;
+        }
+    }
+    
+    public void aumentarVolume () {
+        if (volume > 100){
+            volume++;
+        }
+    }
+
+    public void diminuirVolume () {
+        if (volume > 0){
+            volume--;
+        }
+    }
+
+    public void trocarCanal (int novoCanal) {
+        if (novoCanal > 0 && novoCanal < 1000){
+            this.canal = novoCanal;
+        }
+    }
+
+    public String toString () {
+        return " Canal: " + canal + " Volume: " + volume + " Ligado: " + ligado;
+    }
 }

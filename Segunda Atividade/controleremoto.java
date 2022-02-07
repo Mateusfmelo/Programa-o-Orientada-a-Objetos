@@ -1,55 +1,31 @@
-public class controleremoto {
-    private int canal ;
-    private int volume ;
-    private boolean ligado;
-    private televisor televisor ;
+public class ControleRemoto {
+    private Televisor tv;
 
-    public controleremoto(int canal, int volume, boolean ligado, televisor televisor){
-        this.setCanal(canal);
-        this.setVolume(volume) ;
-        this.setLigado(ligado);
-        this.setTelevisor(televisor);
+    public ControleRemoto (Televisor tv) {
+        this.tv = tv;
     }
 
-    public boolean getLigado() {
-        return ligado;
-    }
-    
-    public void setLigado(boolean ligado) {
-        this.ligado = ligado;
-    }
-    
-    public televisor getTelevisor() {
-        return televisor;
-    }
-    
-    public void setTelevisor(televisor televisor) {
-        this.televisor = televisor;
-    }
-    
-    public int getVolume() {
-        return volume;
-    }
-    
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
-    
-    public int getCanal() {
-        return canal;
+    public void ligar () {
+        tv.ligar ();
     }
 
-    public void setCanal(int canal) {
-        this.canal = canal;
+    public void desligar () {
+        tv. desligar ();
     }
 
-    @Override
-    public String toString(){
-        return
-                "numero:" + getCanal() +
-                    "\nsom:"+ getVolume()+
-                    "\nstatus:"+getLigado()+
-                    "\n"+ getTelevisor();
-                  
+    public void aumentarVolume () {
+        tv.aumentarVolume ();
+    }
+
+    public void diminuirVolume () {
+        tv.diminuirVolume ();
+    }
+
+    public void trocarCanal (int novo) {
+        tv.trocarCanal (novo);
+    }
+
+    public String toString () {
+        return " Tv: " + tv.toString();
     }
 }

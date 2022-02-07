@@ -1,13 +1,24 @@
 class Main{
     public static void main(String[] args) {
-        professor p1 = new professor(7217617,"Mateus Lindo 171", "História" );
-        porta d1 = new porta ("creme", 200, 80, false);
-        televisor toshiba = new televisor(4, 100, false, true, true, false, true);
-        controleremoto toshibacontrole = new controleremoto(6, 20,false, toshiba);
+        // criar objetos
+        Televisor minhaTv = new Televisor(10, 10, false);
 
-        System.out.println(p1);
-        System.out.println(d1);
-        System.out.println(toshiba);
-        System.out.println(toshibacontrole);
+        ControleRemoto controle = new ControleRemoto (minhaTv);
+
+        // invocar métodos disponíveis na classe Televisor
+        minhaTv. ligar();
+        minhaTv.aumentarVolume();
+        minhaTv.trocarCanal(20);
+        System.out.println(minhaTv.toString());
+        minhaTv.desligar();
+        System.out.println(minhaTv.toString());
+
+        // invocar métodos disponíveis na classe controleremoto
+        controle.ligar();
+        controle.aumentarVolume();
+        controle.trocarCanal(10);
+        System.out.println(controle.toString());
+        controle.desligar();
+        System.out.println(controle.toString());
     }  
 }
