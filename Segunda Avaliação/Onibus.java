@@ -1,15 +1,17 @@
-public class Caminhao {
+public class Onibus {
     private double velocidade;
     private String descricao;
-    private int ano, cargasuportada, valor, comprimento;
-
-    public Caminhao(double velocidade, String descricao, int ano, int cargasuportada, int valor, int comprimento) {
+    private int ano, placa, valor, comprimento, capacidadepassageiro;
+    
+    public Onibus(double velocidade, String descricao, int ano, int placa, int valor, int comprimento,
+            int capacidadepassageiro) {
         this.velocidade = velocidade;
         this.descricao = descricao;
         this.ano = ano;
-        this.cargasuportada = cargasuportada;
+        this.placa = placa;
         this.valor = valor;
         this.comprimento = comprimento;
+        this.capacidadepassageiro = capacidadepassageiro;
     }
 
     public double getVelocidade() {
@@ -36,12 +38,12 @@ public class Caminhao {
         this.ano = ano;
     }
 
-    public int getCargasuportada() {
-        return cargasuportada;
+    public int getPlaca() {
+        return placa;
     }
 
-    public void setCargasuportada(int cargasuportada) {
-        this.cargasuportada = cargasuportada;
+    public void setPlaca(int placa) {
+        this.placa = placa;
     }
 
     public int getValor() {
@@ -60,14 +62,23 @@ public class Caminhao {
         this.comprimento = comprimento;
     }
 
+    public int getCapacidadepassageiro() {
+        return capacidadepassageiro;
+    }
+
+    public void setCapacidadepassageiro(int capacidadepassageiro) {
+        this.capacidadepassageiro = capacidadepassageiro;
+    }
+
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
         result = prime * result + ano;
-        result = prime * result + cargasuportada;
+        result = prime * result + capacidadepassageiro;
         result = prime * result + comprimento;
         result = prime * result + ((descricao == null) ? 0 : descricao.hashCode());
+        result = prime * result + placa;
         result = prime * result + valor;
         long temp;
         temp = Double.doubleToLongBits(velocidade);
@@ -83,10 +94,10 @@ public class Caminhao {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Caminhao other = (Caminhao) obj;
+        Onibus other = (Onibus) obj;
         if (ano != other.ano)
             return false;
-        if (cargasuportada != other.cargasuportada)
+        if (capacidadepassageiro != other.capacidadepassageiro)
             return false;
         if (comprimento != other.comprimento)
             return false;
@@ -94,6 +105,8 @@ public class Caminhao {
             if (other.descricao != null)
                 return false;
         } else if (!descricao.equals(other.descricao))
+            return false;
+        if (placa != other.placa)
             return false;
         if (valor != other.valor)
             return false;
@@ -104,8 +117,9 @@ public class Caminhao {
 
     @Override
     public String toString() {
-        return "Caminhao [ano=" + ano + ", cargasuportada=" + cargasuportada + ", comprimento=" + comprimento
-                + ", descricao=" + descricao + ", valor=" + valor + ", velocidade=" + velocidade + "]";
+        return "Onibus [ano=" + ano + ", capacidadepassageiro=" + capacidadepassageiro + ", comprimento=" + comprimento
+                + ", descricao=" + descricao + ", placa=" + placa + ", valor=" + valor + ", velocidade=" + velocidade
+                + "]";
     }
 
     
