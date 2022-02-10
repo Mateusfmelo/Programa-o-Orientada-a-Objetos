@@ -1,4 +1,4 @@
-public class Principal {
+public class Principal_outra_Forma {
     public static void main(String[] args) {
         Zoologico zoo = new Zoologico();
        
