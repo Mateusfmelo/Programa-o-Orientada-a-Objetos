@@ -35,6 +35,5 @@ public class Carro extends Automovel {
 
     @Override
     public String toString() {
-        return "Carro{" + "velocidade: " + velocidade + ", ano: " + ano + ", valor: " + valor + ", descricao: " + descricao + '\'' +  ", placa: " + placa + '\'' + ", potencia: " + potencia + ", Quantidade DePortas: " + qtdeportas + '}';
+        return "Carro{" + "velocidade: " + velocidade + ", ano: " + ano + ", descricao: " + descricao ;};
     }
-}

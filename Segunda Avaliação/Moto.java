@@ -22,6 +22,5 @@ public class Moto extends Automovel{
 
     @Override
     public String toString() {
-        return "Moto{" + "velocidade: " + velocidade + ", ano: " + ano + ", valor: " + valor + ", descricao: '" + descricao + '\'' +", placa: '" + placa + '\'' +", potencia: " + potencia +'}';
+        return "Moto{" + "velocidade: " + velocidade + ", ano: " + ano + ", descricao: " + descricao ;}
     }
-}

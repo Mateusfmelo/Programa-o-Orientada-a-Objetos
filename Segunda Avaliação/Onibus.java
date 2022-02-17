@@ -4,7 +4,7 @@ public class Onibus extends Automovel{
     private int velocidade, ano, capacidadepassageiro;
 
     public Onibus(int velocidade, double valor, double comprimento, String descricao, String placa, int ano,
-            int capacidadepassageiro) {
+        int capacidadepassageiro) {
         super(velocidade, valor, descricao, placa, ano);
         this.velocidade = velocidade;
         this.valor = valor;
@@ -83,6 +83,5 @@ public class Onibus extends Automovel{
 
     @Override
     public String toString() {
-        return "Onibus{" + "velocidade: " + velocidade + ", ano: " + ano +  ", valor: " + valor + ", descricao: '" + descricao + '\'' + ", placa: '" + placa + '\'' + ", capacidadePassageiros: " + capacidadepassageiro + ", comprimento: " + comprimento + '}';
+        return "Onibus{" + "velocidade: " + velocidade + ", ano: " + ano + ", descricao: " + descricao;}
     }
-}
