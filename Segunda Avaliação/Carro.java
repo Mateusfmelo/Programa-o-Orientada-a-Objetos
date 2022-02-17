@@ -1,65 +1,9 @@
-public class Carro extends Automovel implements Veiculo {
-    private double velocidade, valor;
-    private String descricao, placa;
-    private int ano, qtdeportas, potencia;
+public class Carro extends Automovel {
+    private int potencia, qtdeportas ;
 
-    public Carro(double velocidade, double valor, String descricao, String placa, int ano, int qtdeportas,
-            int potencia) {
-        super(velocidade, descricao, placa, ano);
-        this.velocidade = velocidade;
-        this.valor = valor;
-        this.descricao = descricao;
-        this.placa = placa;
-        this.ano = ano;
-        this.qtdeportas = qtdeportas;
+    public Carro(int velocidade, double valor, String descricao, String placa, int ano, int potencia, int qtdeportas) {
+        super(velocidade, valor, descricao, placa, ano);
         this.potencia = potencia;
-    }
-
-    public double getVelocidade() {
-        return velocidade;
-    }
-
-    public void setVelocidade(double velocidade) {
-        this.velocidade = velocidade;
-    }
-
-    public double getValor() {
-        return valor;
-    }
-
-    public void setValor(double valor) {
-        this.valor = valor;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public String getPlaca() {
-        return placa;
-    }
-
-    public void setPlaca(String placa) {
-        this.placa = placa;
-    }
-
-    public int getAno() {
-        return ano;
-    }
-
-    public void setAno(int ano) {
-        this.ano = ano;
-    }
-
-    public int getQtdeportas() {
-        return qtdeportas;
-    }
-
-    public void setQtdeportas(int qtdeportas) {
         this.qtdeportas = qtdeportas;
     }
 
@@ -71,17 +15,26 @@ public class Carro extends Automovel implements Veiculo {
         this.potencia = potencia;
     }
 
-    @Override
-    public String toString() {
-        return "Carro [ano=" + ano + ", descricao=" + descricao + ", placa=" + placa + ", potencia=" + potencia
-                + ", qtdeportas=" + qtdeportas + ", valor=" + valor + ", velocidade=" + velocidade + "]";
+    public int getQtdeportas() {
+        return qtdeportas;
+    }
+
+    public void setQtdeportas(int qtdeportas) {
+        this.qtdeportas = qtdeportas;
     }
 
     @Override
     public void acelerar() {
+        acelerarCarroOuMoto(this.velocidade);
     }
 
     @Override
     public void frear() {
+        frearCarroOuMoto(this.velocidade);
+    }
+
+    @Override
+    public String toString() {
+        return "Carro{" + "velocidade: " + velocidade + ", ano: " + ano + ", valor: " + valor + ", descricao: " + descricao + '\'' +  ", placa: " + placa + '\'' + ", potencia: " + potencia + ", Quantidade DePortas: " + qtdeportas + '}';
     }
 }

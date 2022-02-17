@@ -1,11 +1,11 @@
-public class Onibus extends Automovel implements Veiculo {
-    private double velocidade, valor, comprimento;
+public class Onibus extends Automovel{
+    private double valor, comprimento;
     private String descricao, placa;
-    private int ano, capacidadepassageiro;
+    private int velocidade, ano, capacidadepassageiro;
 
-    public Onibus(double velocidade, double valor, double comprimento, String descricao, String placa, int ano,
+    public Onibus(int velocidade, double valor, double comprimento, String descricao, String placa, int ano,
             int capacidadepassageiro) {
-        super(velocidade, descricao, placa, ano);
+        super(velocidade, valor, descricao, placa, ano);
         this.velocidade = velocidade;
         this.valor = valor;
         this.comprimento = comprimento;
@@ -15,11 +15,11 @@ public class Onibus extends Automovel implements Veiculo {
         this.capacidadepassageiro = capacidadepassageiro;
     }
 
-    public double getVelocidade() {
+    public int getVelocidade() {
         return velocidade;
     }
 
-    public void setVelocidade(double velocidade) {
+    public void setVelocidade(int velocidade) {
         this.velocidade = velocidade;
     }
 
@@ -72,17 +72,17 @@ public class Onibus extends Automovel implements Veiculo {
     }
 
     @Override
-    public String toString() {
-        return "Onibus [ano=" + ano + ", capacidadepassageiro=" + capacidadepassageiro + ", comprimento=" + comprimento
-                + ", descricao=" + descricao + ", placa=" + placa + ", valor=" + valor + ", velocidade=" + velocidade
-                + "]";
-    }
-
-    @Override
     public void acelerar() {
+        acelerarCaminhaoOuOnibus(this.velocidade);
     }
 
     @Override
     public void frear() {
+        frearCaminhaoOuOnibus(this.velocidade);
+    }
+
+    @Override
+    public String toString() {
+        return "Onibus{" + "velocidade: " + velocidade + ", ano: " + ano +  ", valor: " + valor + ", descricao: '" + descricao + '\'' + ", placa: '" + placa + '\'' + ", capacidadePassageiros: " + capacidadepassageiro + ", comprimento: " + comprimento + '}';
     }
 }

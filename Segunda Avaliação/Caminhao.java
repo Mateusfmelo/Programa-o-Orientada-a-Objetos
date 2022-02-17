@@ -1,26 +1,11 @@
-public class Caminhao extends Automovel implements Veiculo {
-    private double velocidade, cargasuportada, valor, comprimento;
-    private String descricao, placa;
-    private int ano;
+public class Caminhao extends Automovel{
+    private double cargasuportada, comprimento;
     
-    public Caminhao(double velocidade, double cargasuportada, double valor, double comprimento, String descricao,
-            String placa, int ano) {
-        super(velocidade, descricao, placa, ano);
-        this.velocidade = velocidade;
+    public Caminhao(int velocidade, String descricao, String placa, int ano, double cargasuportada, double valor,
+        double comprimento) {
+        super(velocidade, valor, descricao, placa, ano);
         this.cargasuportada = cargasuportada;
-        this.valor = valor;
         this.comprimento = comprimento;
-        this.descricao = descricao;
-        this.placa = placa;
-        this.ano = ano;
-    }
-
-    public double getVelocidade() {
-        return velocidade;
-    }
-
-    public void setVelocidade(double velocidade) {
-        this.velocidade = velocidade;
     }
 
     public double getCargasuportada() {
@@ -31,14 +16,6 @@ public class Caminhao extends Automovel implements Veiculo {
         this.cargasuportada = cargasuportada;
     }
 
-    public double getValor() {
-        return valor;
-    }
-
-    public void setValor(double valor) {
-        this.valor = valor;
-    }
-
     public double getComprimento() {
         return comprimento;
     }
@@ -47,42 +24,19 @@ public class Caminhao extends Automovel implements Veiculo {
         this.comprimento = comprimento;
     }
 
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public String getPlaca() {
-        return placa;
-    }
-
-    public void setPlaca(String placa) {
-        this.placa = placa;
-    }
-
-    public int getAno() {
-        return ano;
-    }
-
-    public void setAno(int ano) {
-        this.ano = ano;
-    }
-
-    @Override
-    public String toString() {
-        return "Caminhao [ano=" + ano + ", cargasuportada=" + cargasuportada + ", comprimento=" + comprimento
-                + ", descricao=" + descricao + ", placa=" + placa + ", valor=" + valor + ", velocidade=" + velocidade
-                + "]";
-    }
-
     @Override
     public void acelerar() {
+        acelerarCaminhaoOuOnibus(this.velocidade);
     }
 
     @Override
     public void frear() {
+        frearCaminhaoOuOnibus(this.velocidade);
     }
+
+    @Override
+    public String toString() {
+        return "Caminhao{" + "velocidade: " + velocidade + ", ano: " + ano + ", valor: " + valor + ", descricao: '" + descricao + '\'' + ", placa: " + placa + '\'' + ", cargaSuportada: " + cargasuportada + ", comprimento: " + comprimento +  '}';
+    }
+
 }

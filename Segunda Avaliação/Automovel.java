@@ -1,21 +1,30 @@
-public abstract class Automovel{
-    private double velocidade;
-    private String descricao, placa;
-    private int ano;
+public abstract class Automovel implements Veiculo{
+    protected double valor;
+    protected String descricao, placa;
+    protected int ano, velocidade;
     
-    public Automovel(double velocidade, String descricao, String placa, int ano) {
+    public Automovel(int velocidade, double valor , String descricao, String placa, int ano) {
         this.velocidade = velocidade;
+        this.valor = valor;
         this.descricao = descricao;
         this.placa = placa;
         this.ano = ano;
     }
 
-    public double getVelocidade() {
+    public int getVelocidade() {
         return velocidade;
     }
 
-    public void setVelocidade(double velocidade) {
+    public void setVelocidade(int velocidade) {
         this.velocidade = velocidade;
+    }
+
+    public double getValor(){
+        return valor;
+    }
+
+    public void setValor(double valor){
+        this.valor = valor;
     }
 
     public String getDescricao() {
@@ -41,12 +50,40 @@ public abstract class Automovel{
     public void setAno(int ano) {
         this.ano = ano;
     }
+    
+    protected void acelerarCarroOuMoto (int velocidade) {
+        if (this. velocidade <= 0){
+            System.out.println("Valor não permitido");
+        } else {
+            this.velocidade += 10;
+            System.out.println(this.velocidade);
+    }
+}
 
-    @Override
-    public String toString() {
-        return "Automovel [ano=" + ano + ", descricao=" + descricao + ", placa=" + placa + ", velocidade=" + velocidade
-                + "]";
+    protected void acelerarCaminhaoOuOnibus (int velocidade){
+        if (this.velocidade <= 0){
+            System.out.println("Valor não permitido");
+        } else {
+            this.velocidade += 8;
+            System.out.println(this.velocidade);
+        }
     }
 
-    
+    protected void frearCarroOuMoto (int velocidade) {
+        if (this.velocidade <= 0){
+            System.out.println("Valor não permitido");
+        }  else {
+            this.velocidade -= 10;
+            System.out.println(this.velocidade);
+        }
+}
+
+    protected void frearCaminhaoOuOnibus (int velocidade){
+        if (this.velocidade <= 0){
+            System.out.println("Valor não permitido");
+        } else {
+            this.velocidade -= 8;
+            System.out.println(this.velocidade);
+        }
+    }
 }
