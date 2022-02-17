@@ -1,15 +1,16 @@
-public class Moto{
-    private double Velocidade;
-    private String descricao;
-    private int ano, placa, potencia, valor;
+public class Moto extends Automovel implements Veiculo{
+    private double Velocidade, valor;
+    private String descricao, placa;
+    private int ano, potencia;
     
-    public Moto(double velocidade, String descricao, int ano, int placa, int potencia, int valor) {
+    public Moto(double velocidade, double valor, String descricao, String placa, int ano, int potencia) {
+        super(velocidade, descricao, placa, ano);
         Velocidade = velocidade;
-        this.descricao = descricao;
-        this.ano = ano;
-        this.placa = placa;
-        this.potencia = potencia;
         this.valor = valor;
+        this.descricao = descricao;
+        this.placa = placa;
+        this.ano = ano;
+        this.potencia = potencia;
     }
 
     public double getVelocidade() {
@@ -20,12 +21,28 @@ public class Moto{
         Velocidade = velocidade;
     }
 
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
     public String getDescricao() {
         return descricao;
     }
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public String getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(String placa) {
+        this.placa = placa;
     }
 
     public int getAno() {
@@ -36,14 +53,6 @@ public class Moto{
         this.ano = ano;
     }
 
-    public int getPlaca() {
-        return placa;
-    }
-
-    public void setPlaca(int placa) {
-        this.placa = placa;
-    }
-
     public int getPotencia() {
         return potencia;
     }
@@ -52,61 +61,17 @@ public class Moto{
         this.potencia = potencia;
     }
 
-    public int getValor() {
-        return valor;
-    }
-
-    public void setValor(int valor) {
-        this.valor = valor;
-    }
-
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        long temp;
-        temp = Double.doubleToLongBits(Velocidade);
-        result = prime * result + (int) (temp ^ (temp >>> 32));
-        result = prime * result + ano;
-        result = prime * result + ((descricao == null) ? 0 : descricao.hashCode());
-        result = prime * result + placa;
-        result = prime * result + potencia;
-        result = prime * result + valor;
-        return result;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Moto other = (Moto) obj;
-        if (Double.doubleToLongBits(Velocidade) != Double.doubleToLongBits(other.Velocidade))
-            return false;
-        if (ano != other.ano)
-            return false;
-        if (descricao == null) {
-            if (other.descricao != null)
-                return false;
-        } else if (!descricao.equals(other.descricao))
-            return false;
-        if (placa != other.placa)
-            return false;
-        if (potencia != other.potencia)
-            return false;
-        if (valor != other.valor)
-            return false;
-        return true;
-    }
-
     @Override
     public String toString() {
         return "Moto [Velocidade=" + Velocidade + ", ano=" + ano + ", descricao=" + descricao + ", placa=" + placa
                 + ", potencia=" + potencia + ", valor=" + valor + "]";
     }
- 
-    
+
+    @Override
+    public void acelerar() {
+    }
+
+    @Override
+    public void frear() {
+    }
 }
