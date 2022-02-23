@@ -8,11 +8,11 @@ public class Mercadinho {
     }
 
     public void calcularTotal(){
-        double aux = 0;
+        double total = 0;
         for (int c = 0; c < clientes.size(); c++){ //Tabajara usando c++ nesse código ashuashuashu
-            aux += clientes.get(c).CalcularPagamento();
+            total += clientes.get(c).CalcularPagamento();
         }
-        System.out.println("O valor total das compras com desconto aplicado é: R$" + aux);
+        System.out.println("O valor total das compras com desconto aplicado é: R$" + total);
         System.out.println("Os clientes são:");
     }
 
