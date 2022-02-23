@@ -9,11 +9,11 @@ public class Mercadinho {
 
     public void calcularTotal(){
         double aux = 0;
-        for (int c = 0; c < clientes.size(); c++){
+        for (int c = 0; c < clientes.size(); c++){ //Tabajara usando c++ nesse código ashuashuashu
             aux += clientes.get(c).CalcularPagamento();
         }
-        System.out.println("O valor total das compras com desconto é: R$" + aux);
-        System.out.println("O clientes são:");
+        System.out.println("O valor total das compras com desconto aplicado é: R$" + aux);
+        System.out.println("Os clientes são:");
     }
 
     public void imprimirCliente() {
