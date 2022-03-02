@@ -13,5 +13,6 @@ public class Main {
         mercadinho.calcularTotal();
 
         mercadinho.imprimirCliente();
+
     }
 }
