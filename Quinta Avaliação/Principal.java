@@ -3,9 +3,9 @@ public class Principal {
 
         CadastroMilitar cadastro = new CadastroMilitar();
 
-        Militar MilitarEB = new MilitarExercito(6588461, "Subtenente", true, true);
-        Militar MilitarMB = new MilitarMarinha(518712, "Sargento", false);
-        Militar MilitarFAB = new MilitarAeronautica(4145516, "Tenente", 3, 101);
+        Militar MilitarEB = new MilitarExercito(123456, "Subtenente", true, true);
+        Militar MilitarMB = new MilitarMarinha(789012, "Sargento", false);
+        Militar MilitarFAB = new MilitarAeronautica(3456789, "Tenente", 3, 101);
 
         cadastro.adicionarMilitar(MilitarEB);
         cadastro.adicionarMilitar(MilitarMB);
