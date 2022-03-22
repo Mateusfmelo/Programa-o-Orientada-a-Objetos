@@ -6,8 +6,5 @@ public class ExcecaoVerificada{
         if (a<35) throw
             new IOException ("valor do argumento de f() é' " + a + " (menor que 35)");
             System.out.println("a = "+ a);
- }
+    }
 }
-
-
-

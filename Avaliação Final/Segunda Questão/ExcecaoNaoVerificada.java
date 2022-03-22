@@ -4,4 +4,3 @@ public class ExcecaoNaoVerificada {
         System.out.println (list [7]); 
     }
 }
-
